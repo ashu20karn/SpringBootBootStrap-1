@@ -1,0 +1,31 @@
+#Connection Details 
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: root
+  servlet: 
+    multipart: 
+      max-file-size: 5000KB
+      max-request-size: 5000KB
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialct: org.hibernate.dialect.MySQL5Dialect
+        
+logging:
+ level:
+  org:
+   hibernate:
+    SQL: DEBUG
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    time-zone: UTC
+server:
+  port: 9090
+    
